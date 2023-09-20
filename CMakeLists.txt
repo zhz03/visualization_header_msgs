@@ -8,7 +8,6 @@ project(visualization_header_msgs)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  autoware_msgs
   geometry_msgs
   pcl_ros
   roscpp
@@ -76,7 +75,7 @@ add_message_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  std_msgs   visualization_msgs#  autoware_msgs#   geometry_msgs#   sensor_msgs#   std_msgs#   visualization_msgs
+  std_msgs   visualization_msgs#  geometry_msgs#   sensor_msgs#   std_msgs#   visualization_msgs
 )
 
 ################################################
@@ -111,7 +110,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES visualization_header_msgs
-CATKIN_DEPENDS autoware_msgs geometry_msgs pcl_ros roscpp rospy sensor_msgs std_msgs tf visualization_msgs message_runtime
+CATKIN_DEPENDS geometry_msgs pcl_ros roscpp rospy sensor_msgs std_msgs tf visualization_msgs message_runtime
 #  DEPENDS system_lib
 )
 
